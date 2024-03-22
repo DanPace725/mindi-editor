@@ -4,10 +4,12 @@ import Menu from "@/components/tailwind/ui/menu";
 import Link from "next/link";
 import TailwindAdvancedEditor from "@/components/tailwind/advanced-editor";
 import { useEffect, useRef, useState } from "react";
+import { useClient } from 'next/client';
 export default function Page() {
+  useClient();
   const [currentView, setCurrentView] = useState('notes');
   const toggleView = () => {
-    setCurrentView(currentView === 'notes' ? 'notes' : 'chat');
+    setCurrentView(currentView === 'notes' ?  'chat');
   };
   return (
     <div className="flex min-h-screen flex-col items-center gap-4 py-4 sm:px-5">
@@ -25,13 +27,11 @@ export default function Page() {
               <div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition transform" style={{ transform: currentView === 'editor' ? 'translateX(100%)' : '' }}></div>
             </div>
             <div className="ml-3 text-neutral-900 font-semibold">
-              Switch to {currentView === 'notes' ? 'notes' : 'Chat'}
+              Switch to {currentView === 'notes' ? 'Chat' : 'Notes'}
             </div>
           </label>
         </div>
-        <Link href="/docs" className="ml-auto">
-          <Button variant="ghost"></Button>
-        </Link>
+        
         <Menu />
       </div>
       <TailwindAdvancedEditor />
