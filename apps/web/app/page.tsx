@@ -2,10 +2,9 @@
 import { Github } from "@/components/tailwind/ui/icons";
 import { Button } from "@/components/tailwind/ui/button";
 import Menu from "@/components/tailwind/ui/menu";
-import Link from "next/link";
 import TailwindAdvancedEditor from "@/components/tailwind/advanced-editor";
-import { useEffect, useRef, useState } from "react";
-import { useClient } from 'next/client';
+import { useState } from "react";
+
 export default function Page() {
   
   const [currentView, setCurrentView] = useState('notes');
