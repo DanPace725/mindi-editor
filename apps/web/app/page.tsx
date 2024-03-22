@@ -1,3 +1,4 @@
+useClient();
 import { Github } from "@/components/tailwind/ui/icons";
 import { Button } from "@/components/tailwind/ui/button";
 import Menu from "@/components/tailwind/ui/menu";
@@ -6,10 +7,10 @@ import TailwindAdvancedEditor from "@/components/tailwind/advanced-editor";
 import { useEffect, useRef, useState } from "react";
 import { useClient } from 'next/client';
 export default function Page() {
-  useClient();
+  
   const [currentView, setCurrentView] = useState('notes');
   const toggleView = () => {
-    setCurrentView(currentView === 'notes' ?  'chat');
+    setCurrentView(currentView === 'notes' ? 'chat': 'notes');
   };
   return (
     <div className="flex min-h-screen flex-col items-center gap-4 py-4 sm:px-5">
