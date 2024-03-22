@@ -1,4 +1,4 @@
-useClient();
+'useClient'
 import { Github } from "@/components/tailwind/ui/icons";
 import { Button } from "@/components/tailwind/ui/button";
 import Menu from "@/components/tailwind/ui/menu";
