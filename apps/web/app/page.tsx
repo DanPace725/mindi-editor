@@ -35,4 +35,4 @@ export default function Page() {
         <Menu />
       </div>
       <TailwindAdvancedEditor />
-    </div>
+    </div>);}
